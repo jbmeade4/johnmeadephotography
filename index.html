@@ -1,72 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Meade Photography</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
+<title>John Meade Photography</title>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+<style>
 
-        body{
-            background:#1A1D18;
-            color:#F0E9DD;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        header{
-            background:#121410;
-            padding:20px 40px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            border-bottom:2px solid #C9B28C;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        h1{
-            font-size:1.4rem;
-            letter-spacing:2px;
-        }
+body{
+    background:#1A1D18;
+    color:#F0E9DD;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-        nav a{
-            color:#F0E9DD;
-            text-decoration:none;
-            margin-left:25px;
-            font-size:1rem;
-        }
+/* ---------- HEADER ---------- */
 
-        nav a:hover{
-            color:#C9B28C;
-        }
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#11130F;
+    border-bottom:1px solid rgba(201,178,140,.25);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    z-index:1000;
+}
 
-        .hero{
-            height:85vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:30px;
-        }
-
-        .hero h2{
-            font-size:3rem;
-            margin-bottom:15px;
-        }
-
-        .hero p{
-            font-size:1.2rem;
-            color:#C9B28C;
-        }
+.logo{
+    font-size:1.3rem;
+    font-weight:bold;
+    letter-spacing:2px;
+}
 
 nav{
     display:flex;
+    gap:30px;
     align-items:center;
-    gap:25px;
+}
+
+nav a{
+    color:#F0E9DD;
+    text-decoration:none;
+    transition:.25s;
+}
+
+nav a:hover{
+    color:#C9B28C;
 }
 
 .dropdown{
@@ -79,24 +72,139 @@ nav{
     top:100%;
     left:0;
     background:#121410;
+    border:1px solid #3B4436;
     min-width:220px;
-    border:1px solid #C9B28C;
 }
 
 .dropdown-content a{
     display:block;
-    padding:12px 18px;
-    margin:0;
-}
-
-.dropdown-content a:hover{
-    background:#22261F;
+    padding:14px 18px;
 }
 
 .dropdown:hover .dropdown-content{
     display:block;
 }
-    </style>
+
+/* ---------- HERO ---------- */
+
+.hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(15,17,13,.55),rgba(15,17,13,.75)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:clamp(2.8rem,8vw,5rem);
+    letter-spacing:4px;
+    margin-bottom:18px;
+}
+
+.hero h2{
+    color:#C9B28C;
+    font-size:1.4rem;
+    font-weight:normal;
+    margin-bottom:30px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.button{
+
+    display:inline-block;
+    padding:15px 34px;
+
+    border:2px solid #C9B28C;
+
+    color:#F0E9DD;
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    background:#C9B28C;
+    color:#121410;
+
+}
+
+.about{
+
+    max-width:900px;
+    margin:auto;
+    padding:90px 30px;
+
+}
+
+.about h2{
+
+    margin-bottom:25px;
+    color:#C9B28C;
+
+}
+
+.about p{
+
+    line-height:1.9;
+    font-size:1.05rem;
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width:850px){
+
+header{
+
+    flex-direction:column;
+    gap:20px;
+
+}
+
+nav{
+
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+
+}
+
+.hero h1{
+
+    font-size:3rem;
+
+}
+
+.hero h2{
+
+    font-size:1.2rem;
+
+}
+
+}
+
+</style>
 
 </head>
 
@@ -104,13 +212,15 @@ nav{
 
 <header>
 
-<h1>John Meade Photography</h1>
+<div class="logo">JOHN MEADE PHOTOGRAPHY</div>
 
 <nav>
 
+<a href="#">Home</a>
+
 <div class="dropdown">
 
-<a href="#">Portfolio ▼</a>
+<a href="#">Portfolio ▾</a>
 
 <div class="dropdown-content">
 
@@ -123,26 +233,47 @@ nav{
 
 </div>
 
-<a href="#">Home</a>
 <a href="#">Pricing</a>
+
 <a href="#">Contact</a>
 
-</nav>
 </nav>
 
 </header>
 
 <section class="hero">
 
-<div>
+<div class="hero-content">
 
-<h2>Stuck in the Moment.</h2>
+<h1>John Meade</h1>
 
-<p>Portraits • Sports • Performing Arts</p>
+<h2>Stuck in the moment.</h2>
+
+<p>
+Portraits • Sports • Performing Arts
+</p>
+
+<a class="button" href="#">View Portfolio</a>
 
 </div>
 
 </section>
 
+<section class="about">
+
+<h2>Photography that feels real.</h2>
+
+<p>
+
+Whether I'm photographing a senior portrait, a Friday night football game,
+or a theater production, my goal is always the same: preserve a moment exactly
+as it felt. Every photograph on this site represents a real person, a real
+performance, or a real memory.
+
+</p>
+
+</section>
+
 </body>
+
 </html>
