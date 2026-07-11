@@ -87,35 +87,38 @@ h2{
 }
 
 .gallery{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
-
-    gap:25px;
-
+    column-count:3;
+    column-gap:25px;
 }
 
 .gallery img{
-
     width:100%;
-    aspect-ratio:auto;
-
+    height:auto;
     display:block;
+    margin-bottom:25px;
 
     border-radius:8px;
 
     transition:.25s;
-
     cursor:pointer;
 
+    break-inside:avoid;
 }
 
 .gallery img:hover{
-
     transform:scale(1.02);
+}
 
+@media (max-width:1000px){
+    .gallery{
+        column-count:2;
+    }
+}
+
+@media (max-width:650px){
+    .gallery{
+        column-count:1;
+    }
 }
 
 footer{
