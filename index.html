@@ -27,35 +27,26 @@ body{
 /* ---------- HEADER ---------- */
 
 header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background:#11130F;
-    border-bottom:1px solid rgba(201,178,140,.25);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 8%;
-    z-index:1000;
+    background:#121410;
+    padding:20px 40px;
+    border-bottom:2px solid #C9B28C;
 }
 
-.logo{
-    font-size:1.3rem;
-    font-weight:bold;
+header h1{
+    margin-bottom:15px;
     letter-spacing:2px;
+    font-size:1.4rem;
 }
 
 nav{
     display:flex;
-    gap:30px;
-    align-items:center;
+    flex-wrap:wrap;
+    gap:25px;
 }
 
 nav a{
     color:#F0E9DD;
     text-decoration:none;
-    transition:.25s;
 }
 
 nav a:hover{
@@ -69,16 +60,14 @@ nav a:hover{
 .dropdown-content{
     display:none;
     position:absolute;
-    top:100%;
-    left:0;
     background:#121410;
-    border:1px solid #3B4436;
+    border:1px solid #C9B28C;
     min-width:220px;
 }
 
 .dropdown-content a{
     display:block;
-    padding:14px 18px;
+    padding:12px 18px;
 }
 
 .dropdown:hover .dropdown-content{
