@@ -24,7 +24,7 @@ header h1{
 
 nav{
     display:flex;
-    justify-content:space-between;
+    justify-content:flex-start;
     align-items:center;
 }
 
