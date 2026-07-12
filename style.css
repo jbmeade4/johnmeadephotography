@@ -67,22 +67,21 @@ nav a:hover{
 @media (max-width:850px){
 
 header{
+    padding:20px 40px;
+}
 
-    flex-direction:column;
-    gap:20px;
-
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
 }
 
 .hero h1{
-
     font-size:3rem;
-
 }
 
 .hero h2{
-
     font-size:1.2rem;
-
 }
 
 }
