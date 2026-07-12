@@ -119,12 +119,109 @@ footer{
 
 }
 
+
+
 /* ---------- MOBILE ---------- */
 
 @media (max-width:850px){
 
     nav{
         gap:25px;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero h2{
+        font-size:1.2rem;
+    }
+
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+    height:100vh;
+
+    background:
+        linear-gradient(rgba(15,17,13,.55), rgba(15,17,13,.75)),
+        url("jmp-1.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:clamp(2.8rem,8vw,5rem);
+    letter-spacing:4px;
+    margin-bottom:18px;
+}
+
+.hero h2{
+    color:#C9B28C;
+    font-size:1.4rem;
+    font-weight:normal;
+    margin-bottom:30px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.button{
+    display:inline-block;
+    padding:15px 34px;
+
+    border:2px solid #C9B28C;
+
+    color:#F0E9DD;
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.button:hover{
+    background:#C9B28C;
+    color:#121410;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about{
+    max-width:900px;
+    margin:auto;
+    padding:90px 30px;
+}
+
+.about h2{
+    margin-bottom:25px;
+    color:#C9B28C;
+}
+
+.about p{
+    line-height:1.9;
+    font-size:1.05rem;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width:850px){
+
+    nav{
+        gap:18px;
     }
 
     .hero h1{
