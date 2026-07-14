@@ -22,6 +22,23 @@ header h1{
     font-size:1.4rem;
 }
 
+.about{
+    max-width:900px;
+    margin:auto;
+    padding:90px 30px;
+}
+
+.about h2{
+    color:#C9B28C;
+    margin-bottom:10px;
+}
+
+.about p{
+    line-height:1.9;
+    font-size:1.05rem;
+    margin-bottom:25px;
+}
+
 nav{
     display:flex;
     flex-wrap:wrap;
